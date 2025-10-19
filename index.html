@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card - HNG Stage 0</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <article class="profile-card" data-testid="test-profile-card">
+        <header class="profile-header">
+          <figure class="avatar-container">
+            <img
+              src="assets/james.png"
+              alt="Profile avatar of Freeman - Software Developer"
+              class="avatar"
+              data-testid="test-user-avatar"
+            />
+          </figure>
+          <div class="profile-info">
+            <h1 class="user-name" data-testid="test-user-name">
+              James Freeman
+            </h1>
+            <p class="user-bio" data-testid="test-user-bio">
+              Passionate frontend engineer with expertise in React, Nextjs,
+              JavaScript, and modern web technologies. I love creating intuitive
+              user experiences and building scalable web applications.
+            </p>
+            <div class="current-time">
+              <span class="time-label">Current Time (ms): </span>
+              <span class="time-value" data-testid="test-user-time"></span>
+            </div>
+          </div>
+        </header>
+
+        <nav class="social-section">
+          <h2 class="section-title">Connect With Me</h2>
+          <ul class="social-links" data-testid="test-user-social-links">
+            <li>
+              <a
+                href="https://github.com/james-eo"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+                aria-label="Visit my GitHub profile"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/james-o"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                aria-label="Connect with me on LinkedIn"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/realjames247"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                aria-label="Follow me on Twitter"
+              >
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="hobbies-section">
+          <h2 class="section-title">My Hobbies</h2>
+          <ul class="hobbies-list" data-testid="test-user-hobbies">
+            <li>Coding and building side projects</li>
+            <li>Learning new programming languages</li>
+            <li>Reading tech blogs and documentation</li>
+            <li>Playing chess and strategy games</li>
+            <li>Fashion and digital art</li>
+          </ul>
+        </section>
+
+        <section class="dislikes-section">
+          <h2 class="section-title">Things I Dislike</h2>
+          <ul class="dislikes-list" data-testid="test-user-dislikes">
+            <li>Poorly documented code</li>
+            <li>Slow internet connections</li>
+            <li>Unnecessary meetings without agenda</li>
+            <li>Poor design choices</li>
+            <li>Repetitive manual tasks</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

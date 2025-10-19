@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card Test Verification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .test-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .test-result {
+        padding: 10px;
+        border-radius: 4px;
+        margin: 5px 0;
+      }
+      .pass {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      .fail {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 5px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Profile Card Test Verification</h1>
+
+    <div class="test-container">
+      <h2>Profile Card Preview</h2>
+      <iframe src="index.html" title="Profile Card Preview"></iframe>
+    </div>
+
+    <div class="test-container">
+      <h2>Data-TestID Verification</h2>
+      <button onclick="runTests()">Run Tests</button>
+      <button onclick="openProfileCard()">Open in New Tab</button>
+      <div id="test-results"></div>
+    </div>
+
+    <div class="test-container">
+      <h2>Required Test IDs Checklist</h2>
+      <ul>
+        <li><code>test-profile-card</code> - Profile card root container</li>
+        <li><code>test-user-name</code> - Name (plain text)</li>
+        <li><code>test-user-bio</code> - Short biography</li>
+        <li><code>test-user-time</code> - Current time in milliseconds</li>
+        <li><code>test-user-avatar</code> - Avatar image</li>
+        <li><code>test-user-social-links</code> - Social links list</li>
+        <li><code>test-user-hobbies</code> - Hobbies list</li>
+        <li><code>test-user-dislikes</code> - Dislikes list</li>
+      </ul>
+    </div>
+
+    <div class="test-container">
+      <h2>Deployment Checklist</h2>
+      <ul>
+        <li>✅ All files created (index.html, styles.css, script.js)</li>
+        <li>✅ All required data-testid attributes implemented</li>
+        <li>✅ Semantic HTML structure</li>
+        <li>✅ Responsive design (mobile, tablet, desktop)</li>
+        <li>✅ Real-time clock in milliseconds</li>
+        <li>✅ Accessibility features</li>
+        <li>✅ Social links with proper attributes</li>
+        <li>✅ README documentation</li>
+      </ul>
+
+      <h3>Next Steps:</h3>
+      <ol>
+        <li>Test the profile card locally</li>
+        <li>Push to GitHub repository</li>
+        <li>Deploy to Netlify/GitHub Pages/Vercel</li>
+        <li>Submit the live URL and GitHub repo</li>
+      </ol>
+    </div>
+
+    <script>
+      function runTests() {
+        const iframe = document.querySelector("iframe");
+        const iframeDocument =
+          iframe.contentDocument || iframe.contentWindow.document;
+
+        const requiredTestIds = [
+          "test-profile-card",
+          "test-user-name",
+          "test-user-bio",
+          "test-user-time",
+          "test-user-avatar",
+          "test-user-social-links",
+          "test-user-hobbies",
+          "test-user-dislikes",
+        ];
+
+        const results = document.getElementById("test-results");
+        results.innerHTML = "<h3>Test Results:</h3>";
+
+        requiredTestIds.forEach((testId) => {
+          const element = iframeDocument.querySelector(
+            `[data-testid="${testId}"]`
+          );
+          const resultDiv = document.createElement("div");
+          resultDiv.className = element
+            ? "test-result pass"
+            : "test-result fail";
+          resultDiv.textContent = `${testId}: ${
+            element ? "FOUND ✓" : "MISSING ✗"
+          }`;
+          results.appendChild(resultDiv);
+        });
+
+        // Check if time is displaying correctly
+        const timeElement = iframeDocument.querySelector(
+          '[data-testid="test-user-time"]'
+        );
+        const timeResult = document.createElement("div");
+        if (
+          timeElement &&
+          timeElement.textContent &&
+          !isNaN(timeElement.textContent)
+        ) {
+          const timeValue = parseInt(timeElement.textContent);
+          const currentTime = Date.now();
+          const timeDiff = Math.abs(currentTime - timeValue);
+
+          timeResult.className =
+            timeDiff < 5000 ? "test-result pass" : "test-result fail";
+          timeResult.textContent = `Time accuracy: ${
+            timeDiff < 5000 ? "ACCURATE ✓" : "INACCURATE ✗"
+          } (${timeDiff}ms diff)`;
+        } else {
+          timeResult.className = "test-result fail";
+          timeResult.textContent = "Time display: MISSING OR INVALID ✗";
+        }
+        results.appendChild(timeResult);
+      }
+
+      function openProfileCard() {
+        window.open("index.html", "_blank");
+      }
+
+      // Auto-run tests when page loads
+      setTimeout(runTests, 1000);
+    </script>
+  </body>
+</html>
