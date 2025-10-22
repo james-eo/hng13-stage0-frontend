@@ -1,0 +1,484 @@
+/* About Page Specific Styles */
+
+.about-main {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 1rem;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Section Styles */
+.about-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.section-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.section-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.section-content {
+  padding: 2rem;
+}
+
+/* Biography Section */
+.section-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Goals Section */
+.goals-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.goal-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  color: #2d3748;
+}
+
+.goal-item:hover {
+  transform: translateX(5px);
+  background: #dae5f2;
+  color: #2d3748;
+}
+
+.goal-number {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.goal-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.goal-item p {
+  color: #4a5568;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Confidence Section */
+.confidence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.confidence-item {
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.confidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.confidence-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.confidence-level {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.level-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #667eea;
+  min-width: 70px;
+}
+
+.progress-bar {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.progress-fill {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.confidence-item p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Future Note Section */
+.future-note {
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid #e2e8f0;
+  position: relative;
+}
+
+.future-note::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: #667eea;
+  font-family: serif;
+  line-height: 1;
+}
+
+.note-greeting {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 1rem !important;
+}
+
+.note-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.note-content li {
+  margin: 0.5rem 0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.note-signature {
+  font-style: italic;
+  text-align: right;
+  margin-top: 1.5rem !important;
+  color: #667eea;
+}
+
+.note-meta {
+  text-align: right;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+/* Extra Thoughts Section */
+.thoughts-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.thought-card {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #48bb78;
+  transition: all 0.3s ease;
+}
+
+.thought-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(72, 187, 120, 0.15);
+}
+
+.thought-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+}
+
+.thought-card blockquote {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #4a5568;
+  line-height: 1.7;
+  position: relative;
+}
+
+.inspiration-section {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #667eea;
+}
+
+.inspiration-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.inspiration-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.inspiration-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid white;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.inspiration-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
+}
+
+.inspiration-item strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about-header h1 {
+    font-size: 4rem;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .thoughts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .confidence-header {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-main {
+    padding: 3rem 1rem;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .thoughts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inspiration-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .thoughts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .about-container {
+    color: #e2e8f0;
+  }
+
+  .about-header h1 {
+    color: #e2e8f0;
+  }
+
+  .intro-text {
+    color: #cbd5e0;
+  }
+
+  .about-section {
+    background: #2d3748;
+  }
+
+  .section-content p,
+  .goal-item p,
+  .confidence-item p,
+  .note-content,
+  .thought-card blockquote,
+  .inspiration-item {
+    color: #cbd5e0;
+  }
+
+  .goal-item,
+  .confidence-item,
+  .thought-card {
+    background: #4a5568;
+  }
+
+  .goal-item h3,
+  .confidence-header h3,
+  .thought-card h3 {
+    color: #e2e8f0;
+  }
+
+  .future-note,
+  .inspiration-section {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    border-color: #718096;
+  }
+
+  .inspiration-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: #cbd5e0;
+    color: #e2e8f0;
+  }
+
+  .inspiration-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .inspiration-item strong {
+    color: #e2e8f0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .about-section {
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  .section-header {
+    background: #667eea !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .about-section:hover,
+  .goal-item:hover,
+  .thought-card:hover {
+    transform: none;
+  }
+
+  .progress-fill {
+    transition: none;
+  }
+}

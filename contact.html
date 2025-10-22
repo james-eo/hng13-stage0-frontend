@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Freeman's Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Site Navigation -->
+    <nav class="site-navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" aria-label="Home - Freeman's Profile">Freeman</a>
+        </div>
+        <ul class="nav-menu" role="menubar">
+          <li role="none">
+            <a href="index.html" role="menuitem" class="nav-link">Home</a>
+          </li>
+          <li role="none">
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="nav-link active"
+              aria-current="page"
+              >Contact</a
+            >
+          </li>
+          <li role="none">
+            <a href="about.html" role="menuitem" class="nav-link">About</a>
+          </li>
+        </ul>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="contact-main">
+      <div class="contact-container">
+        <header class="contact-header">
+          <h1>Get In Touch</h1>
+          <p>
+            I'd love to hear from you! Send me a message and I'll get back to
+            you as soon as possible.
+          </p>
+        </header>
+
+        <!-- Success Message (hidden by default) -->
+        <div
+          class="success-message"
+          data-testid="test-contact-success"
+          aria-live="polite"
+          role="alert"
+          hidden
+        >
+          <div class="success-content">
+            <svg
+              class="success-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
+            <h2>Message Sent Successfully!</h2>
+            <p>
+              Thank you for reaching out. I'll get back to you within 24 hours.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form
+          class="contact-form"
+          id="contactForm"
+          novalidate
+          aria-labelledby="form-title"
+        >
+          <div class="form-grid">
+            <!-- Full Name Field -->
+            <div class="form-group">
+              <label for="contactName" class="form-label">
+                Full Name <span class="required" aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="contactName"
+                name="fullName"
+                data-testid="test-contact-name"
+                class="form-input"
+                required
+                aria-describedby="name-error name-help"
+                autocomplete="name"
+              />
+              <div class="form-help" id="name-help">
+                Enter your full name as you'd like to be addressed
+              </div>
+              <div
+                class="error-message"
+                id="name-error"
+                data-testid="test-contact-error-name"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">
+                Email Address
+                <span class="required" aria-label="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="email"
+                data-testid="test-contact-email"
+                class="form-input"
+                required
+                aria-describedby="email-error email-help"
+                autocomplete="email"
+              />
+              <div class="form-help" id="email-help">
+                We'll never share your email with anyone else
+              </div>
+              <div
+                class="error-message"
+                id="email-error"
+                data-testid="test-contact-error-email"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Subject Field -->
+          <div class="form-group">
+            <label for="contactSubject" class="form-label">
+              Subject <span class="required" aria-label="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="contactSubject"
+              name="subject"
+              data-testid="test-contact-subject"
+              class="form-input"
+              required
+              aria-describedby="subject-error subject-help"
+            />
+            <div class="form-help" id="subject-help">
+              Brief description of what you'd like to discuss
+            </div>
+            <div
+              class="error-message"
+              id="subject-error"
+              data-testid="test-contact-error-subject"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">
+              Message <span class="required" aria-label="required">*</span>
+            </label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              data-testid="test-contact-message"
+              class="form-textarea"
+              required
+              minlength="10"
+              rows="5"
+              aria-describedby="message-error message-help"
+              placeholder="Tell me about your project, question, or just say hello..."
+            ></textarea>
+            <div class="form-help" id="message-help">
+              <span class="char-count">0</span>/500 characters (minimum 10
+              required)
+            </div>
+            <div
+              class="error-message"
+              id="message-error"
+              data-testid="test-contact-error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="submit-button"
+              data-testid="test-contact-submit"
+              aria-describedby="submit-help"
+            >
+              <span class="button-text">Send Message</span>
+              <span class="button-loading" hidden>
+                <svg class="spinner" viewBox="0 0 24 24">
+                  <circle
+                    class="path"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                Sending...
+              </span>
+            </button>
+            <div class="form-help" id="submit-help">
+              All fields marked with * are required
+            </div>
+          </div>
+        </form>
+
+        <!-- Alternative Contact Methods -->
+        <section class="contact-alternatives">
+          <h2>Other Ways to Connect</h2>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="method-content">
+                <h3>Email</h3>
+                <a href="mailto:freeman@example.com">freeman@example.com</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
+                  <path d="M24 12h-4l-2-3-2 3h-4"></path>
+                </svg>
+              </div>
+              <div class="method-content">
+                <h3>LinkedIn</h3>
+                <a
+                  href="https://linkedin.com/in/freeman"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Connect professionally</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="method-content">
+                <h3>Response Time</h3>
+                <p>Usually within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

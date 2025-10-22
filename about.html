@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Freeman's Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <!-- Site Navigation -->
+    <nav class="site-navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" aria-label="Home - Freeman's Profile">Freeman</a>
+        </div>
+        <ul class="nav-menu" role="menubar">
+          <li role="none">
+            <a href="index.html" role="menuitem" class="nav-link">Home</a>
+          </li>
+          <li role="none">
+            <a href="contact.html" role="menuitem" class="nav-link">Contact</a>
+          </li>
+          <li role="none">
+            <a
+              href="about.html"
+              role="menuitem"
+              class="nav-link active"
+              aria-current="page"
+              >About</a
+            >
+          </li>
+        </ul>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="about-main" data-testid="test-about-page">
+      <div class="about-container">
+        <header class="about-header">
+          <h1>About Freeman</h1>
+          <p class="intro-text">
+            A journey of growth, learning, and building amazing things with code
+          </p>
+        </header>
+
+        <!-- Biography Section -->
+        <section class="about-section" data-testid="test-about-bio">
+          <div class="section-header">
+            <h2>My Story</h2>
+            <div class="section-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="section-content">
+            <p>
+              My journey into technology began with curiosity and a desire to
+              solve real-world problems. What started as tinkering with basic
+              HTML and CSS has evolved into a passion for creating user-centered
+              digital experiences that make a difference.
+            </p>
+            <p>
+              I believe that great software is not just about clean code or
+              impressive features—it's about understanding people and building
+              tools that genuinely improve their lives. This philosophy drives
+              every project I work on, from simple landing pages to complex web
+              applications.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring new technologies,
+              contributing to open-source projects, or mentoring aspiring
+              developers. I'm constantly learning and believe that the tech
+              community thrives when we share knowledge and support each other's
+              growth.
+            </p>
+          </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section class="about-section" data-testid="test-about-goals">
+          <div class="section-header">
+            <h2>My Goals in This Program</h2>
+            <div class="section-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="goals-grid">
+              <div class="goal-item">
+                <div class="goal-number">01</div>
+                <h3>Master Modern Frontend Frameworks</h3>
+                <p>
+                  Deepen my expertise in React, Next.js, and emerging frameworks
+                  while building production-ready applications that scale and
+                  perform beautifully.
+                </p>
+              </div>
+              <div class="goal-item">
+                <div class="goal-number">02</div>
+                <h3>Build a Strong Professional Network</h3>
+                <p>
+                  Connect with like-minded developers, industry professionals,
+                  and mentors who can provide guidance and collaboration
+                  opportunities for mutual growth.
+                </p>
+              </div>
+              <div class="goal-item">
+                <div class="goal-number">03</div>
+                <h3>Contribute to Open Source</h3>
+                <p>
+                  Give back to the developer community by contributing to
+                  meaningful open-source projects and creating tools that help
+                  other developers succeed.
+                </p>
+              </div>
+              <div class="goal-item">
+                <div class="goal-number">04</div>
+                <h3>Launch a SaaS Product</h3>
+                <p>
+                  Build and launch a Software as a Service product that solves a
+                  real problem for users while learning about entrepreneurship
+                  and product development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Confidence Section -->
+        <section class="about-section" data-testid="test-about-confidence">
+          <div class="section-header">
+            <h2>Areas I'm Building Confidence In</h2>
+            <div class="section-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="confidence-list">
+              <div class="confidence-item">
+                <div class="confidence-header">
+                  <h3>Backend Architecture & System Design</h3>
+                  <div class="confidence-level">
+                    <span class="level-label">Learning</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 40%"></div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  While I'm strong in frontend development, I'm actively
+                  learning backend technologies like Node.js, databases, and
+                  system architecture to become a more well-rounded developer.
+                  I'm working on understanding how to design scalable systems
+                  and APIs.
+                </p>
+              </div>
+              <div class="confidence-item">
+                <div class="confidence-header">
+                  <h3>DevOps & Cloud Infrastructure</h3>
+                  <div class="confidence-level">
+                    <span class="level-label">Growing</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Deployment and infrastructure management are areas where I'm
+                  building my skills. I can deploy applications, but I want to
+                  master CI/CD pipelines, containerization with Docker, and
+                  cloud services like AWS or Azure.
+                </p>
+              </div>
+              <div class="confidence-item">
+                <div class="confidence-header">
+                  <h3>Technical Leadership & Code Reviews</h3>
+                  <div class="confidence-level">
+                    <span class="level-label">Developing</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 50%"></div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  As I advance in my career, I want to develop stronger skills
+                  in leading technical discussions, conducting thorough code
+                  reviews, and mentoring junior developers. Communication and
+                  leadership are just as important as technical skills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Future Note Section -->
+        <section class="about-section" data-testid="test-about-future-note">
+          <div class="section-header">
+            <h2>Note to Future Me</h2>
+            <div class="section-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="future-note">
+              <div class="note-content">
+                <p class="note-greeting">Hey Future Freeman! 👋</p>
+                <p>
+                  I hope you're reading this from a place of growth and
+                  accomplishment. Remember this moment when you were hungry to
+                  learn, excited about every new concept, and determined to
+                  build something meaningful.
+                </p>
+                <p>
+                  <strong>Don't forget these truths:</strong>
+                </p>
+                <ul>
+                  <li>
+                    Every expert was once a beginner—embrace the learning
+                    process
+                  </li>
+                  <li>The best code solves real problems for real people</li>
+                  <li>
+                    Community and collaboration beat solo genius every time
+                  </li>
+                  <li>
+                    It's okay to not know everything—curiosity matters more than
+                    perfection
+                  </li>
+                  <li>
+                    Your unique perspective and experiences are your superpowers
+                  </li>
+                </ul>
+                <p>
+                  I hope you've achieved those goals we set, built amazing
+                  things, and helped others along the way. But more importantly,
+                  I hope you've stayed curious, kind, and excited about the
+                  endless possibilities that code creates.
+                </p>
+                <p class="note-signature">
+                  Keep building,<br />
+                  <strong>Past Freeman</strong> 🚀
+                </p>
+              </div>
+              <div class="note-meta">
+                <small>Written during HNG Stage 1 • October 2025</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Extra Thoughts Section -->
+        <section class="about-section" data-testid="test-about-extra">
+          <div class="section-header">
+            <h2>Random Thoughts & Inspirations</h2>
+            <div class="section-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="thoughts-grid">
+              <div class="thought-card">
+                <h3>On Problem Solving</h3>
+                <blockquote>
+                  "The best solutions often come from understanding the problem
+                  deeply, not from jumping to code immediately. Sometimes the
+                  most elegant solution is the simplest one."
+                </blockquote>
+              </div>
+              <div class="thought-card">
+                <h3>On Learning</h3>
+                <blockquote>
+                  "I've learned that tutorials are great for getting started,
+                  but real growth happens when you build something from scratch
+                  and encounter problems you've never faced before."
+                </blockquote>
+              </div>
+              <div class="thought-card">
+                <h3>On Community</h3>
+                <blockquote>
+                  "The tech community has taught me that sharing knowledge isn't
+                  just about helping others— it's one of the best ways to
+                  solidify your own understanding and discover new
+                  perspectives."
+                </blockquote>
+              </div>
+              <div class="thought-card">
+                <h3>On Innovation</h3>
+                <blockquote>
+                  "Innovation isn't always about using the newest technology.
+                  Sometimes it's about applying existing tools in creative ways
+                  to solve problems that matter to people."
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="inspiration-section">
+              <h3>Current Inspirations</h3>
+              <div class="inspiration-items">
+                <div class="inspiration-item">
+                  <strong>Books:</strong> "Clean Code" by Robert Martin, "The
+                  Pragmatic Programmer" by Hunt & Thomas
+                </div>
+                <div class="inspiration-item">
+                  <strong>Podcasts:</strong> Syntax.fm, The Changelog, React
+                  Podcast
+                </div>
+                <div class="inspiration-item">
+                  <strong>Developers:</strong> Dan Abramov, Sarah Drasner, Kent
+                  C. Dodds, Cassidy Williams
+                </div>
+                <div class="inspiration-item">
+                  <strong>Quote:</strong> "The only way to do great work is to
+                  love what you do." - Steve Jobs
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -17,6 +17,7 @@ function initializeProfileCard() {
   setupTimeUpdater();
   setupAccessibilityFeatures();
   setupImageErrorHandling();
+  setupNavigation();
 }
 
 /**
@@ -209,6 +210,82 @@ function setupPrintStyles() {
 }
 
 setupPrintStyles();
+
+/**
+ * Setup navigation functionality
+ */
+function setupNavigation() {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+
+      // Toggle menu visibility
+      navMenu.classList.toggle("active");
+      navToggle.classList.toggle("active");
+
+      // Update ARIA attributes for accessibility
+      navToggle.setAttribute("aria-expanded", !isExpanded);
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function closeMenu(e) {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+          navToggle.setAttribute("aria-expanded", "false");
+          document.removeEventListener("click", closeMenu);
+        }
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+        navToggle.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.focus(); // Return focus to toggle button
+      }
+    });
+
+    // Handle menu item clicks on mobile
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        // Close mobile menu when a link is clicked
+        if (window.innerWidth <= 767) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+
+  // Set active page in navigation
+  setActiveNavItem();
+}
+
+/**
+ * Set active navigation item based on current page
+ */
+function setActiveNavItem() {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    link.classList.remove("active");
+    link.removeAttribute("aria-current");
+
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+}
 
 // Export functions for testing purposes (if needed)
 if (typeof module !== "undefined" && module.exports) {

@@ -1,137 +1,212 @@
-# Profile Card - HNG Stage 0 Task
+# Freeman's Portfolio - HNG Stage 1 Multi-Page Application
 
-A responsive, accessible profile card component built with semantic HTML, modern CSS, and vanilla JavaScript. This project meets all the requirements for the HNG Stage 0 task.
+A responsive, accessible multi-page web application built with semantic HTML, modern CSS, and vanilla JavaScript. This project expands on the Stage 0 Profile Card to create a complete portfolio website with navigation, contact form validation, and reflective content.
 
-## 🎯 Task Requirements
+## 🎯 HNG Stage 1 Requirements
 
-This profile card includes all required elements with proper `data-testid` attributes for automated testing:
+This multi-page application includes all required pages and features:
 
-### ✅ Required Elements
+### 📄 **Pages Overview**
 
-- **Profile card root container** — `data-testid="test-profile-card"`
-- **Name (plain text)** — `data-testid="test-user-name"`
-- **Short biography (paragraph)** — `data-testid="test-user-bio"`
-- **Current time (in milliseconds)** — `data-testid="test-user-time"`
-- **Avatar image (user photo)** — `data-testid="test-user-avatar"`
-- **Social links list** — `data-testid="test-user-social-links"`
-  - Individual links: `test-user-social-github`, `test-user-social-linkedin`, `test-user-social-twitter`
-- **Hobbies (list)** — `data-testid="test-user-hobbies"`
-- **Dislikes (list)** — `data-testid="test-user-dislikes"`
+#### 1. **Home Page** (`index.html`)
 
-## 🚀 Features
+- ✅ Profile card from Stage 0 with all original elements
+- ✅ Navigation menu integration
+- ✅ All original `data-testid` attributes preserved
 
-### Semantic HTML
+#### 2. **Contact Us Page** (`contact.html`)
 
-- Uses semantic tags: `<article>`, `<header>`, `<nav>`, `<section>`, `<figure>`, `<h1>`, `<p>`, `<ul>`, `<li>`
-- Proper heading hierarchy and document structure
-- Accessible image with descriptive alt text
+- ✅ Contact form with validation
+- ✅ All required fields and `data-testid` attributes:
+  - `test-contact-name` — Full name input
+  - `test-contact-email` — Email input
+  - `test-contact-subject` — Subject input
+  - `test-contact-message` — Message textarea
+  - `test-contact-submit` — Submit button
+  - `test-contact-error-<field>` — Error messages for each field
+  - `test-contact-success` — Success message
 
-### Responsive Design
+#### 3. **About Me Page** (`about.html`)
 
-- **Mobile-first approach** with progressive enhancement
-- **Flexbox and CSS Grid** for modern layout techniques
-- **Three breakpoints:**
-  - Mobile: < 768px (stacked layout)
-  - Tablet: 768px - 1023px (side-by-side with 2-column lists)
-  - Desktop: 1024px+ (optimized spacing with 3-column lists)
+- ✅ Reflective content with required sections:
+  - `test-about-page` — Main page container
+  - `test-about-bio` — Biography section
+  - `test-about-goals` — Goals in the program
+  - `test-about-confidence` — Areas of low confidence
+  - `test-about-future-note` — Note to future self
+  - `test-about-extra` — Extra thoughts and inspirations
 
-### Accessibility
+## 🚀 Key Features
 
-- **Keyboard navigation** support for all interactive elements
-- **Focus indicators** with proper contrast
-- **ARIA labels** and live regions where appropriate
-- **Screen reader friendly** semantic structure
-- **Skip link** for keyboard users
-- **High contrast mode** support
-- **Reduced motion** support for users who prefer it
-- **Dark mode** support based on user preferences
+### 🧭 **Site-Wide Navigation**
 
-### JavaScript Functionality
+- **Fixed navigation bar** with backdrop blur effect
+- **Mobile-responsive hamburger menu** with smooth animations
+- **Active page indication** with proper ARIA attributes
+- **Keyboard accessible** with focus management
+- **Consistent across all pages** for seamless UX
 
-- **Real-time clock** displaying `Date.now()` in milliseconds
-- **Updates every second** for accuracy
-- **Error handling** for image loading failures
-- **Progressive enhancement** - works without JS
-- **Accessibility features** programmatically added
+### ✅ **Contact Form Validation**
 
-## 📱 Responsive Breakpoints
+- **Real-time validation** with immediate feedback
+- **Comprehensive error handling** for all field types
+- **Custom validation rules:**
+  - Name: Letters, spaces, hyphens, apostrophes only
+  - Email: Valid email format (name@example.com)
+  - Subject: 3-100 characters
+  - Message: 10-500 characters with live character count
+- **Accessible error messages** linked to form fields
+- **Success confirmation** with auto-hide functionality
+- **Loading states** with animated spinner
 
-```css
-/* Mobile: Default styles */
-/* Tablet: 768px and up */
-@media (min-width: 768px) {
-  ...;
-}
+### 🎯 **Advanced Accessibility**
 
-/* Desktop: 1024px and up */
-@media (min-width: 1024px) {
-  ...;
-}
+- **Semantic HTML5** throughout (`<main>`, `<section>`, `<nav>`, `<article>`)
+- **ARIA landmarks and labels** for screen readers
+- **Form accessibility** with proper `<label>` associations
+- **Keyboard navigation** with visible focus indicators
+- **Skip links** for improved navigation
+- **Screen reader announcements** for dynamic content
+- **Color contrast compliance** (WCAG 2.1 AA)
 
-/* Large Desktop: 1200px and up */
-@media (min-width: 1200px) {
-  ...;
-}
+### 📱 **Responsive Design**
+
+- **Mobile-first CSS** with progressive enhancement
+- **Flexible grid layouts** adapting to screen size
+- **Touch-friendly interactions** (44px minimum touch targets)
+- **Optimized typography** scaling across devices
+- **Four breakpoints:**
+  - Mobile: < 768px
+  - Tablet: 768px - 1023px
+  - Desktop: 1024px - 1199px
+  - Large Desktop: 1200px+
+
+### 🎨 **Modern CSS Features**
+
+- **CSS Grid and Flexbox** for layout
+- **CSS Custom Properties** for theming
+- **Backdrop filters** for modern glass effects
+- **Gradient backgrounds** and hover animations
+- **Dark mode support** via `prefers-color-scheme`
+- **High contrast mode** compatibility
+- **Reduced motion** respect for accessibility
+
+### 💻 **JavaScript Features**
+
+- **Modular ES6+ code** with proper error handling
+- **Real-time form validation** with debouncing
+- **Dynamic navigation** state management
+- **Character counting** with visual feedback
+- **Loading states** and animations
+- **Mobile menu** toggle functionality
+- **Time display** updating every second
+- **Progressive enhancement** - works without JavaScript
+
+## 📁 Project Structure
+
+```
+freeman-portfolio/
+├── index.html          # Home page with profile card
+├── contact.html        # Contact form with validation
+├── about.html         # About me with reflective content
+├── styles.css         # Main stylesheet (shared styles + navigation)
+├── contact.css        # Contact page specific styles
+├── about.css          # About page specific styles
+├── script.js          # Main JavaScript (shared functionality)
+├── contact.js         # Contact form validation logic
+├── test.html          # Testing verification tool (optional)
+├── README.md          # This documentation
+└── DEPLOYMENT.md      # Deployment instructions
 ```
 
 ## 🔧 Local Development
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (optional but recommended)
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Local web server (recommended for full functionality)
+- Text editor or IDE
 
-### Running the Project
-
-#### Option 1: Direct File Opening
-
-1. Clone or download this repository
-2. Open `index.html` directly in your web browser
-3. The profile card will load and display current time
-
-#### Option 2: Local Server (Recommended)
+### Quick Start
 
 ```bash
-# Using Python 3
+# Clone the repository
+git clone <your-repo-url>
+cd freeman-portfolio
+
+# Start local server
 python -m http.server 8000
-
-# Using Python 2
-python -m SimpleHTTPServer 8000
-
-# Using Node.js (if you have http-server installed)
+# OR
 npx http-server
-
-# Using PHP
+# OR
 php -S localhost:8000
+
+# Open in browser
+open http://localhost:8000
 ```
 
-Then visit `http://localhost:8000` in your browser.
+### Page Navigation
 
-### File Structure
+- **Home:** `http://localhost:8000/` or `index.html`
+- **Contact:** `http://localhost:8000/contact.html`
+- **About:** `http://localhost:8000/about.html`
+- **Testing:** `http://localhost:8000/test.html` (verification tool)
 
-```
-stage0/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and responsive design
-├── script.js           # JavaScript functionality
-└── README.md           # This file
-```
+## 🧪 Testing & Validation
 
-## 🧪 Testing Data-TestIDs
+### Data-TestID Verification
 
-All required test IDs are implemented. You can verify them using browser dev tools or automated tests:
+**Home Page (Stage 0 Elements):**
 
 ```javascript
-// Test ID verification examples
-document.querySelector('[data-testid="test-profile-card"]');
-document.querySelector('[data-testid="test-user-name"]');
-document.querySelector('[data-testid="test-user-bio"]');
-document.querySelector('[data-testid="test-user-time"]');
-document.querySelector('[data-testid="test-user-avatar"]');
-document.querySelector('[data-testid="test-user-social-links"]');
-document.querySelector('[data-testid="test-user-hobbies"]');
-document.querySelector('[data-testid="test-user-dislikes"]');
+// Home page elements
+document.querySelector('[data-testid="test-profile-card"]'); // Profile container
+document.querySelector('[data-testid="test-user-name"]'); // User name
+document.querySelector('[data-testid="test-user-bio"]'); // Biography
+document.querySelector('[data-testid="test-user-time"]'); // Current time
+document.querySelector('[data-testid="test-user-avatar"]'); // Avatar image
+document.querySelector('[data-testid="test-user-social-links"]'); // Social links
+document.querySelector('[data-testid="test-user-hobbies"]'); // Hobbies list
+document.querySelector('[data-testid="test-user-dislikes"]'); // Dislikes list
 ```
+
+**Contact Page Elements:**
+
+```javascript
+// Form fields
+document.querySelector('[data-testid="test-contact-name"]'); // Name input
+document.querySelector('[data-testid="test-contact-email"]'); // Email input
+document.querySelector('[data-testid="test-contact-subject"]'); // Subject input
+document.querySelector('[data-testid="test-contact-message"]'); // Message textarea
+document.querySelector('[data-testid="test-contact-submit"]'); // Submit button
+
+// Validation messages
+document.querySelector('[data-testid="test-contact-error-name"]'); // Name error
+document.querySelector('[data-testid="test-contact-error-email"]'); // Email error
+document.querySelector('[data-testid="test-contact-error-subject"]'); // Subject error
+document.querySelector('[data-testid="test-contact-error-message"]'); // Message error
+document.querySelector('[data-testid="test-contact-success"]'); // Success message
+```
+
+**About Page Elements:**
+
+```javascript
+// Content sections
+document.querySelector('[data-testid="test-about-page"]'); // Main container
+document.querySelector('[data-testid="test-about-bio"]'); // Biography section
+document.querySelector('[data-testid="test-about-goals"]'); // Goals section
+document.querySelector('[data-testid="test-about-confidence"]'); // Confidence section
+document.querySelector('[data-testid="test-about-future-note"]'); // Future note section
+document.querySelector('[data-testid="test-about-extra"]'); // Extra thoughts section
+```
+
+### Form Validation Testing
+
+- **Required fields:** Try submitting empty form
+- **Email validation:** Test invalid email formats
+- **Character limits:** Test minimum/maximum lengths
+- **Real-time feedback:** Watch errors appear/disappear as you type
+- **Success flow:** Fill valid form and submit
 
 ## 🌐 Deployment Options
 
@@ -155,66 +230,153 @@ document.querySelector('[data-testid="test-user-dislikes"]');
 2. Vercel will automatically deploy
 3. Get instant live URL
 
-## 📋 Acceptance Criteria Checklist
+## 📋 HNG Stage 1 Acceptance Criteria
 
-- ✅ All required elements with exact `data-testid` attributes
-- ✅ Semantic HTML tags used throughout
-- ✅ Time displays `Date.now()` in milliseconds and updates
-- ✅ Avatar with proper alt attribute
-- ✅ Social links in container with individual test IDs
-- ✅ Distinct hobbies and dislikes lists
-- ✅ Keyboard navigation works with visible focus
-- ✅ Responsive layout at mobile/tablet/desktop breakpoints
-- ✅ Links open in new tab with security attributes
+### ✅ **Contact Us Page**
 
-## 🎨 Customization
+- ✅ All required fields with correct `data-testids`
+- ✅ Form validation prevents invalid submissions
+- ✅ Success message shows only after valid submission
+- ✅ Error messages tied to inputs with `aria-describedby`
+- ✅ All inputs have proper `<label>` associations
+- ✅ Entire form is keyboard accessible
 
-### Changing Profile Information
+### ✅ **About Me Page**
 
-Edit the content in `index.html`:
+- ✅ All required sections with correct `data-testids`
+- ✅ Semantic HTML used (`main`, `section`, `h2`, `p`)
+- ✅ Reflective content in each required section
+- ✅ Proper heading hierarchy and structure
 
-- Update name in the `h1` tag
-- Modify bio in the `p` tag
-- Change avatar `src` and `alt` attributes
-- Update social links and their URLs
-- Customize hobbies and dislikes lists
+### ✅ **General Requirements**
 
-### Styling Modifications
+- ✅ Semantic HTML throughout all pages
+- ✅ Fully accessible (labels, alt text, ARIA associations)
+- ✅ Responsive across mobile, tablet, desktop
+- ✅ Keyboard navigable with visible focus
+- ✅ Modular, readable, and consistent code
+- ✅ All original Stage 0 elements preserved
 
-All styles are in `styles.css`:
+## 🎨 Customization Guide
 
-- Colors and gradients
-- Typography and spacing
-- Animation effects
-- Responsive breakpoints
+### **Personal Information**
 
-### JavaScript Enhancements
+```html
+<!-- In index.html -->
+<h1 data-testid="test-user-name">Your Name</h1>
+<p data-testid="test-user-bio">Your bio...</p>
 
-`script.js` contains:
+<!-- In about.html -->
+<section data-testid="test-about-bio">
+  <!-- Your story -->
+</section>
+```
 
-- Time update functionality
-- Accessibility features
-- Image error handling
-- Optional scroll animations
+### **Styling & Theming**
 
-## 🏆 HNG Stage 0 Submission
+- **Main styles:** `styles.css` (navigation, shared components)
+- **Contact styles:** `contact.css` (form-specific styling)
+- **About styles:** `about.css` (page-specific layouts)
+- **Color scheme:** CSS custom properties in `:root`
+- **Responsive breakpoints:** Mobile-first media queries
+- **Responsive breakpoints:** Defined in each CSS file
 
-This project fulfills all requirements for the HNG Stage 0 Frontend task:
+### **JavaScript Functionality**
 
-1. **Responsive profile card** with all required elements
-2. **Semantic HTML** structure with proper accessibility
-3. **Data-testid attributes** for automated testing
-4. **Real-time millisecond display** using `Date.now()`
-5. **Mobile-responsive design** that works on all devices
-6. **Keyboard accessibility** and focus management
-7. **Modern CSS** with Flexbox and Grid
-8. **Clean, maintainable code** with comments
+- **Main script:** `script.js` (navigation, time, accessibility)
+- **Contact script:** `contact.js` (form validation logic)
+- **Modular functions:** Easy to extend and maintain
+
+## 🌐 Deployment
+
+### **Netlify (Recommended)**
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: (leave empty)
+3. Set publish directory: `/` (root)
+4. Deploy automatically on git push
+
+### **GitHub Pages**
+
+1. Repository Settings → Pages
+2. Source: Deploy from branch `main`
+3. Folder: `/` (root)
+4. Visit: `https://username.github.io/repo-name`
+
+### **Vercel**
+
+1. Import GitHub repository to Vercel
+2. No configuration needed for static sites
+3. Auto-deploy on commits
+
+## 🏆 HNG Stage 1 Submission
+
+This multi-page portfolio fulfills all Stage 1 requirements:
+
+### **Core Features:**
+
+✅ **Three-page application** (Home, Contact, About)  
+✅ **Site navigation** with mobile responsiveness  
+✅ **Contact form** with comprehensive validation  
+✅ **About page** with reflective, personal content  
+✅ **All required `data-testids`** for automated testing  
+✅ **Semantic HTML** and accessibility throughout  
+✅ **Mobile-first responsive design**  
+✅ **Modern CSS** with animations and effects  
+✅ **Vanilla JavaScript** with error handling
+
+### **Advanced Implementation:**
+
+- **Progressive enhancement** - works without JavaScript
+- **Real-time form validation** with accessible feedback
+- **Mobile navigation** with smooth animations
+- **Dark mode support** via CSS media queries
+- **Print-friendly styles** for documentation
+- **Cross-browser compatibility** and optimization
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-repo-url>
+   cd freeman-portfolio
+   ```
+
+2. **Start local development server**
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+3. **Open in browser**
+
+   ```
+   http://localhost:8000
+   ```
+
+4. **Test all functionality**
+   - Navigate between pages
+   - Test contact form validation
+   - Verify responsive design
+   - Check accessibility features
+
+## 📞 Support & Issues
+
+If you encounter any issues or have questions:
+
+1. Check the browser console for JavaScript errors
+2. Verify all files are in the correct structure
+3. Test with a local server (not file:// protocol)
+4. Ensure browser supports modern CSS features
 
 ## 🔗 Links
 
-- **Live Demo:** [Your deployed URL here]
-- **GitHub Repository:** [Your repository URL here]
+- **Live Demo:** [Deploy and add your URL]
+- **GitHub Repository:** [Your repo URL]
+- **HNG Submission Form:** https://forms.gle/J65RPCVspzJJDGNP7
 
 ---
 
-**Built with ❤️ for HNG Stage 0 Frontend Task**
+**Built with ❤️ for HNG Stage 1 Frontend Task**  
+_Expanding from Stage 0 Profile Card to Multi-Page Portfolio Application_

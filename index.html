@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Site Navigation -->
+    <nav class="site-navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" aria-label="Home - Freeman's Profile">Freeman</a>
+        </div>
+        <ul class="nav-menu" role="menubar">
+          <li role="none">
+            <a
+              href="index.html"
+              role="menuitem"
+              class="nav-link active"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li role="none">
+            <a href="contact.html" role="menuitem" class="nav-link">Contact</a>
+          </li>
+          <li role="none">
+            <a href="about.html" role="menuitem" class="nav-link">About</a>
+          </li>
+        </ul>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
     <main>
       <article class="profile-card" data-testid="test-profile-card">
         <header class="profile-header">
