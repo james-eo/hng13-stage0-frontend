@@ -2,10 +2,6 @@
 
 A responsive, accessible multi-page web application built with semantic HTML, modern CSS, and vanilla JavaScript. This project expands on the Stage 0 Profile Card to create a complete portfolio website with navigation, contact form validation, and reflective content.
 
-## 🎯 HNG Stage 1 Requirements
-
-This multi-page application includes all required pages and features:
-
 ### 📄 **Pages Overview**
 
 #### 1. **Home Page** (`index.html`)
@@ -131,8 +127,8 @@ freeman-portfolio/
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd freeman-portfolio
+git clone https://github.com/james-eo/hng13-stage0-frontend.git
+cd hng13-stage0-frontend
 
 # Start local server
 python -m http.server 8000
@@ -208,28 +204,6 @@ document.querySelector('[data-testid="test-about-extra"]'); // Extra thoughts se
 - **Real-time feedback:** Watch errors appear/disappear as you type
 - **Success flow:** Fill valid form and submit
 
-## 🌐 Deployment Options
-
-### Netlify (Recommended)
-
-1. Fork/clone this repository
-2. Connect your GitHub account to Netlify
-3. Deploy from the repository
-4. Netlify will automatically build and deploy
-
-### GitHub Pages
-
-1. Push code to a GitHub repository
-2. Go to repository Settings → Pages
-3. Select source branch (usually `main`)
-4. Your site will be available at `https://username.github.io/repository-name`
-
-### Vercel
-
-1. Import your GitHub repository to Vercel
-2. Vercel will automatically deploy
-3. Get instant live URL
-
 ## 📋 HNG Stage 1 Acceptance Criteria
 
 ### ✅ **Contact Us Page**
@@ -278,8 +252,7 @@ document.querySelector('[data-testid="test-about-extra"]'); // Extra thoughts se
 - **Contact styles:** `contact.css` (form-specific styling)
 - **About styles:** `about.css` (page-specific layouts)
 - **Color scheme:** CSS custom properties in `:root`
-- **Responsive breakpoints:** Mobile-first media queries
-- **Responsive breakpoints:** Defined in each CSS file
+- **Responsive breakpoints:** Mobile-first media queries across all CSS files
 
 ### **JavaScript Functionality**
 
@@ -303,13 +276,7 @@ document.querySelector('[data-testid="test-about-extra"]'); // Extra thoughts se
 3. Folder: `/` (root)
 4. Visit: `https://username.github.io/repo-name`
 
-### **Vercel**
-
-1. Import GitHub repository to Vercel
-2. No configuration needed for static sites
-3. Auto-deploy on commits
-
-## 🏆 HNG Stage 1 Submission
+## 🏆 **HNG Stage 1 Submission**
 
 This multi-page portfolio fulfills all Stage 1 requirements:
 
@@ -334,33 +301,6 @@ This multi-page portfolio fulfills all Stage 1 requirements:
 - **Print-friendly styles** for documentation
 - **Cross-browser compatibility** and optimization
 
-## 🚀 Getting Started
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <your-repo-url>
-   cd freeman-portfolio
-   ```
-
-2. **Start local development server**
-
-   ```bash
-   python -m http.server 8000
-   ```
-
-3. **Open in browser**
-
-   ```
-   http://localhost:8000
-   ```
-
-4. **Test all functionality**
-   - Navigate between pages
-   - Test contact form validation
-   - Verify responsive design
-   - Check accessibility features
-
 ## 📞 Support & Issues
 
 If you encounter any issues or have questions:
@@ -370,11 +310,19 @@ If you encounter any issues or have questions:
 3. Test with a local server (not file:// protocol)
 4. Ensure browser supports modern CSS features
 
-## 🔗 Links
+## � Project Assets
 
-- **Live Demo:** [Deploy and add your URL]
-- **GitHub Repository:** [Your repo URL]
-- **HNG Submission Form:** https://forms.gle/J65RPCVspzJJDGNP7
+- `assets/freeman.png` — Profile avatar image
+
+## ⏰ **Important Dates**
+
+- **Submission Deadline:** October 22, 2025 | 11:59 pm WAT
+- **Status:** ✅ **READY FOR SUBMISSION**
+
+## Links
+
+- **Live Demo:** https://james-eo.github.io/hng13-stage0-frontend/
+- **GitHub Repository:** https://github.com/james-eo/hng13-stage0-frontend
 
 ---
 
