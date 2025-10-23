@@ -118,8 +118,9 @@
 
 .goal-item:hover {
   transform: translateX(5px);
-  background: #dae5f2;
+  background: #c5d9e8;
   color: #2d3748;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
 }
 
 .goal-number {
@@ -143,11 +144,19 @@
   margin: 0 0 0.5rem 0;
 }
 
+.goal-item:hover h3 {
+  color: #1a202c;
+}
+
 .goal-item p {
   color: #4a5568;
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.goal-item:hover p {
+  color: #2d3748;
 }
 
 /* Confidence Section */
@@ -245,12 +254,15 @@
 .note-content ul {
   margin: 1rem 0;
   padding-left: 1.5rem;
+  list-style: disc;
 }
 
 .note-content li {
-  margin: 0.5rem 0;
-  color: #4a5568;
-  line-height: 1.6;
+  margin: 0.75rem 0;
+  color: #2d3748;
+  line-height: 1.8;
+  font-size: 1rem;
+  display: list-item;
 }
 
 .note-signature {
@@ -430,6 +442,10 @@
   .goal-item h3,
   .confidence-header h3,
   .thought-card h3 {
+    color: #e2e8f0;
+  }
+
+  .note-content li {
     color: #e2e8f0;
   }
 
